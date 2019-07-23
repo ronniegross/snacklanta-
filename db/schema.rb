@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190722132322) do
+ActiveRecord::Schema.define(version: 20190723223741) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "commenter",     limit: 255
+    t.text     "body",          limit: 65535
+    t.integer  "restaurant_id", limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "comments", ["restaurant_id"], name: "index_comments_on_restaurant_id", using: :btree
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -20,4 +30,5 @@ ActiveRecord::Schema.define(version: 20190722132322) do
     t.datetime "updated_at",               null: false
   end
 
+  add_foreign_key "comments", "restaurants"
 end
