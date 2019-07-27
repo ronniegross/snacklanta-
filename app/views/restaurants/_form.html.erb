@@ -15,13 +15,34 @@
   <% end %>
 
 	<p>
-		<%= f.label :title %><br>
-		<%=	f.text_field :title %>
+		<%= f.label :name %><br>
+		<%=	f.text_field :name %>
 	</p>
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
+  </p>
+  <p>
+    <%= f.label :picture %><br>
+    <%= f.text_field :picture %>
+  </p>
+  <p>
+    <%= f.label :order %><br>
+    <%= f.text_field :order %>
+  </p>
 	<p>
-		<%= f.label :text %> <br>
-		<%= f.text_area :text %>
+		<%= f.label :thoughts %> <br>
+		<%= f.text_area :thoughts %>
 	</p>
+  <p>
+    <%= f.label :atlanta %> <br>
+    <%= f.radio_button :atlanta, true %> In ATL
+    <%= f.radio_button :atlanta, false  %> Not in ATL
+  </p>
 
 	<p>
 		<%= f.submit %>

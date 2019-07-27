@@ -1,4 +1,7 @@
 class RestaurantsController < ApplicationController
+
+	http_basic_authenticate_with name: "goose", password: "secret", except: [:index, :show]
+
 	def index
 		@restaurants = Restaurant.all
 	end
@@ -44,6 +47,6 @@ class RestaurantsController < ApplicationController
 
 	private
 		def restaurant_params
-			params.require(:restaurant).permit(:title, :text)
+			params.require(:restaurant).permit(:name, :address, :website, :order, :thoughts, :atlanta)
 		end
 end

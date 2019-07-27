@@ -4,14 +4,14 @@
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Name</th>
+    <th>Address</th>
   </tr>
- 
+
   <% @restaurants.each do |restaurant| %>
     <tr>
-      <td><%= restaurant.title %></td>
-      <td><%= restaurant.text %></td>
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.thoughts %></td>
       <td><%= link_to 'Show', restaurant_path(restaurant) %></td>
       <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
       <td><%= link_to 'Destroy', restaurant_path(restaurant),
