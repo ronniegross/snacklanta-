@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+   font-family: 'granite-modern';
+   src: url('GraniteModern-Regular.ttf')
+}
+
+body {
+	background-color: #000EFF;
+}

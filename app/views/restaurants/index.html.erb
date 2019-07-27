@@ -1,4 +1,4 @@
-<h2>Listing all restaurants</h2>
+<h2>Listing Atlanta Restaurants</h2>
 
 <%= link_to 'New restaurant', new_restaurant_path %>
 
@@ -10,13 +10,15 @@
 
   <% @restaurants.each do |restaurant| %>
     <tr>
-      <td><%= restaurant.name %></td>
-      <td><%= restaurant.thoughts %></td>
-      <td><%= link_to 'Show', restaurant_path(restaurant) %></td>
-      <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-      <td><%= link_to 'Destroy', restaurant_path(restaurant),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+      <% if restaurant.atlanta? %>
+        <td><%= restaurant.name %></td>
+        <td><%= restaurant.thoughts %></td>
+        <td><%= link_to 'Show', restaurant_path(restaurant) %></td>
+        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+        <td><%= link_to 'Destroy', restaurant_path(restaurant),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>

@@ -7,11 +7,42 @@ h1 {
 	letter-spacing: .15em;
 	// font-family: 'Roboto Slab', serif;
 	font-family: 'Bangers', cursive;
-	font-size: 70px;
-	text-shadow: #8cbaff -5px 4px;
+	font-size: 90px;
+	text-shadow: #00FF0C -5px 4px;
+	margin-bottom: 0;
+	text-align: center;
 }
 
 h2 {
-	color: #b5b5b5;
-	font-family: 'IBM Plex Serif', serif;
+	color: #6700B7;
+	font-family: 'Coming Soon', cursive;
+}
+
+a {
+	font-family: 'granite-modern';
+	color: #FFBC00;
+	text-decoration: none;
+	
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#homepage-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#snacklanta-link {
+	align-self: flex-start;
+}
+
+#recipes-link {
+	align-self: flex-end;
+}
+
+.landing-page-link-box {
+	margin: 40px 0 40px 0;
 }
