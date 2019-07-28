@@ -1,4 +1,4 @@
-<h2>Atlanta Restaurants</h2>
+<h2>Not Atlanta Restaurants</h2>
 
 <%= link_to 'New restaurant', new_restaurant_path %>
 
@@ -8,9 +8,9 @@
     <th>Address</th>
   </tr>
 
-  <% @restaurants.each do |restaurant| %>
+  <% @otp_restaurants.each do |restaurant| %>
     <tr>
-      <% if restaurant.atlanta? %>
+      <% if !restaurant.atlanta?  %>
         <td><%= restaurant.name %></td>
         <td><%= restaurant.thoughts %></td>
         <td><%= link_to 'Show', restaurant_path(restaurant) %></td>

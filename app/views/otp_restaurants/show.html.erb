@@ -1,0 +1,40 @@
+<!-- <% if !@otp_restaurant.atlanta? %> -->
+	<p>
+		<strong>Name:</strong>
+		<%= @restaurant.name %>
+	</p>
+
+	<p>
+		<strong>Address:</strong>
+		<%= @restaurant.address %>
+	</p>
+
+	<p>
+		<strong>Website:</strong>
+		<%= @restaurant.website %>
+	</p>
+
+	<p>
+		<strong>Order:</strong>
+		<%= @restaurant.order %>
+	</p>
+
+	<div>
+		<%= image_tag(@restaurant.picture) %>
+	</div>
+
+	<p>
+		<strong>Thoughts:</strong>
+		<%= @restaurant.thoughts %>
+	</p>
+<!-- <% end %> -->
+
+
+<h2>Comments</h2>
+<%= render @restaurant.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>

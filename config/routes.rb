@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :otp_restaurants do
+    resources :comments
+  end
+
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
